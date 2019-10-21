@@ -1,0 +1,27 @@
+# Spring properties
+spring:
+  application:
+    name: product-service
+
+# HTTP Server
+server:
+  port: 2222
+
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+                  defaultZone: http://localhost:1111/discovery-server/eureka/
+    instance:
+      leaseRenewalIntervalInSeconds: false   # DO NOT DO THIS IN PRODUCTION
+
+management:
+  security:
+    enabled: false
+
+
+
+#http://localhost:2222/product-service/swagger-ui.html#/
+
+
