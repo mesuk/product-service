@@ -7,13 +7,15 @@ spring:
 server:
   port: 2222
 
+
+
 # Discovery Server Access
 eureka:
   client:
         serviceUrl:
-            defaultZone: http://localhost:1111/eureka/
+            defaultZone: http://localhost:8080/eureka/
         instance:
-          leaseRenewalIntervalInSeconds: 30   # DO NOT DO THIS IN PRODUCTION
+          leaseRenewalIntervalInSeconds: false   # DO NOT DO THIS IN PRODUCTION
 
 management:
   security:
