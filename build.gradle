@@ -9,6 +9,10 @@ group = 'com.skarim'
 version = ''
 sourceCompatibility = '1.8'
 
+war {
+    archivesBaseName = 'product-service'
+}
+
 repositories {
     mavenCentral()
     maven { url 'https://repo.spring.io/milestone' }
