@@ -9,6 +9,7 @@ server:
   servlet:
       context-path: /product-service
 
+my_message:server 5050
 
 # Discovery Server Access
 eureka:

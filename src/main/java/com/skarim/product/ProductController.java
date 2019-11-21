@@ -29,7 +29,7 @@ public class ProductController {
 
         MainResponse mainResponse=new MainResponse();
 
-        String serverName=environment.getProperty("spring.application.name");
+        String serverName=environment.getProperty("my_message");
 
         String ipInfo=getIpInfo();
 
