@@ -11,8 +11,12 @@ server:
 
 my_message: server 9090
 
+
+#eureka.instance.prefer-ip-address=true
 # Discovery Server Access
 eureka:
+  instance:
+    prefer-ip-address = true
   client:
     serviceUrl:
                   defaultZone: http://134.209.96.223:8761/discovery-server/eureka/
