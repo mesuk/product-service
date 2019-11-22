@@ -16,9 +16,7 @@ my_message: server 9090
 # Discovery Server Access
 eureka:
   instance:
-    hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
-
+    prefer-ip-address = true
   client:
     serviceUrl:
                   defaultZone: http://134.209.96.223:8761/discovery-server/eureka/
