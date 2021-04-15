@@ -1,4 +1,4 @@
-package com.skarim.product;
+package com.skarim.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

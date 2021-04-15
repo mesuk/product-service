@@ -1,4 +1,4 @@
-package com.skarim.product.object;
+package com.skarim.user.object;
 
 public class Product {
     private String code;

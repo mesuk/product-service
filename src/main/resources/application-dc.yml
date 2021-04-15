@@ -1,13 +1,26 @@
 # Spring properties
 spring:
   application:
-    name: product-service
+    name: user-service
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.0.101:3406/user_service
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        ddl-auto: create
+        naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: true
+    database: mysql
 
 # HTTP Server
 server:
   port: 9090
   servlet:
-      context-path: /product-service
+    context-path: /user-service
 
 my_message: server 9090
 
@@ -17,11 +30,12 @@ my_message: server 9090
 # Discovery Server Access
 eureka:
   instance:
-    prefer-ip-address : true
-    ip-address : 134.209.96.223
+    prefer-ip-address: true
+    ip-address: localhost
   client:
     serviceUrl:
-                  defaultZone: http://134.209.96.223:8761/discovery-server/eureka/
+      defaultZone: http://192.168.0.101:8080/discovery-server/eureka/
+    #                  defaultZone: http://localhost:8761/discovery-server/eureka/
     instance:
       leaseRenewalIntervalInSeconds: false   # DO NOT DO THIS IN PRODUCTION
 
@@ -31,7 +45,6 @@ management:
 
 
 
-#http://localhost:2222/product-service/swagger-ui.html#/
-#http://localhost:2222/product-service/products/
+#http://localhost:9090/user-service/swagger-ui.html#/
 
 

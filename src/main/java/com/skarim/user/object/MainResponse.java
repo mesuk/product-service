@@ -1,4 +1,4 @@
-package com.skarim.product.object;
+package com.skarim.user.object;
 
 import java.util.ArrayList;
 import java.util.List;
