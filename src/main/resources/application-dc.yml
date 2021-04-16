@@ -18,11 +18,9 @@ spring:
 
 # HTTP Server
 server:
-  port: 9090
+  port: 9191
 #  servlet:
 #    context-path: /user-service
-
-my_message: server 9090
 
 
 #  eureka.instance.prefer-ip-address=true
@@ -30,7 +28,7 @@ my_message: server 9090
 # Discovery Server Access
 eureka:
   instance:
-    prefer-ip-address: true
+    preferIpAddress: true
     ip-address: 192.168.0.101
   client:
     serviceUrl:
@@ -38,6 +36,8 @@ eureka:
     #                  defaultZone: http://localhost:8761/discovery-server/eureka/
     instance:
       leaseRenewalIntervalInSeconds: false   # DO NOT DO THIS IN PRODUCTION
+    registerWithEureka: true
+    fetchRegistry: true
 
 management:
   security:
@@ -45,6 +45,7 @@ management:
 
 
 
-#http://localhost:9090/user-service/swagger-ui.html#/
+#http://localhost:9090/swagger-ui.html#/
+  http://localhost:9091/user/fetchAllCustomer
 
 
