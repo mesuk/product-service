@@ -18,7 +18,7 @@ spring:
 
 # HTTP Server
 server:
-  port: 9191
+  port: 9090
 #  servlet:
 #    context-path: /user-service
 
@@ -33,7 +33,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.0.101:8080/discovery-server/eureka/
-    #                  defaultZone: http://localhost:8761/discovery-server/eureka/
     instance:
       leaseRenewalIntervalInSeconds: false   # DO NOT DO THIS IN PRODUCTION
     registerWithEureka: true
@@ -46,6 +45,6 @@ management:
 
 
 #http://localhost:9090/swagger-ui.html#/
-  http://localhost:9091/user/fetchAllCustomer
+#  http://localhost:9091/user/fetchAllCustomer
 
 
