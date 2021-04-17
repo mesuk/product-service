@@ -3,6 +3,7 @@ package com.skarim.user.controller;
 
 import com.skarim.user.domain.User;
 import com.skarim.user.object.BaseResponse;
+import com.skarim.user.object.UserSaveResponse;
 import com.skarim.user.service.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.core.env.Environment;
@@ -31,12 +32,13 @@ public class UserController {
     @PostMapping(value = "/saveUser")
     public ResponseEntity<BaseResponse> saveUser(HttpServletRequest requestHeader, @RequestBody User request) throws RuntimeException {
 
-        User user = userService.saveUpdateUser(request);
+        String userServer = getServerInfo().toString();
+        UserSaveResponse response = userService.saveUpdateUser(request,userServer);
 
         BaseResponse baseResponse = new BaseResponse(getServerInfo());
 
-        if(user != null){
-            baseResponse.setData(user);
+        if(response != null){
+            baseResponse.setData(response);
             return new ResponseEntity<>(baseResponse, HttpStatus.OK);
 
         }else{
